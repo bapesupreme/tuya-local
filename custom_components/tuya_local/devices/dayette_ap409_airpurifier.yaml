@@ -11,6 +11,7 @@ entities:
         name: switch
   - entity: select
     name: Mode
+    category: config
     dps:
       - id: 3
         type: string
@@ -24,6 +25,7 @@ entities:
             value: Manual
   - entity: select
     name: Fan Speed
+    category: config
     dps:
       - id: 4
         type: string
