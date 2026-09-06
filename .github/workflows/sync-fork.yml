@@ -24,7 +24,7 @@ jobs:
         run: cp dayette_ap409_airpurifier.yaml /tmp/dayette_ap409_airpurifier.yaml
 
       - name: Add upstream remote
-        run: git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+        run: git remote add upstream https://github.com/make-all/tuya-local.git
 
       - name: Fetch upstream
         run: git fetch upstream
