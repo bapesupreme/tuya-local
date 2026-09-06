@@ -1,38 +1,42 @@
-name: Air purifier
+name: Air Purifier AP409
 products:
   - id: rufdceynizoy3e2p
     manufacturer: Dayette
     model: AP409
 entities:
   - entity: fan
-    translation_key: air_purifier
     dps:
       - id: 1
         type: boolean
         name: switch
+  - entity: select
+    name: Mode
+    dps:
       - id: 3
         type: string
-        name: preset_mode
-        optional: true
+        name: option
         mapping:
           - dps_val: auto
-            value: auto
+            value: Auto
           - dps_val: sleep
-            value: sleep
+            value: Sleep
           - dps_val: manual
-            value: manual
+            value: Manual
+  - entity: select
+    name: Fan Speed
+    dps:
       - id: 4
         type: string
-        name: speed
+        name: option
         mapping:
           - dps_val: Low
-            value: 25
+            value: Low
           - dps_val: Medium
-            value: 50
+            value: Medium
           - dps_val: High
-            value: 75
+            value: High
           - dps_val: Pet
-            value: 100
+            value: Pet
   - entity: sensor
     class: pm25
     dps:
@@ -75,13 +79,13 @@ entities:
         type: integer
         name: sensor
         unit: min
-  - entity: lock
-    translation_key: child_lock
+  - entity: switch
+    name: Child Lock
     category: config
     dps:
       - id: 7
         type: boolean
-        name: lock
+        name: switch
   - entity: button
     translation_key: filter_reset
     category: config
